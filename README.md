@@ -44,7 +44,7 @@ CodeCraft is an AI-powered programming companion that generates code in various 
 
 1. Run CodeCraft:
    ```
-   node coder.js
+   node codecraft.js
    ```
 
 2. Follow the prompts:
