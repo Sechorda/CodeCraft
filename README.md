@@ -24,7 +24,7 @@ CodeCraft is an AI-powered programming companion that generates code in various 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/codecraft.git
+   git clone https://github.com/sechorda/codecraft.git
    ```
 
 2. Install dependencies:
