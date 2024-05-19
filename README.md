@@ -1,0 +1,2 @@
+# CodeCraft
+GenAI coding assistant
