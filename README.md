@@ -69,10 +69,6 @@ CodeCraft is an AI-powered programming companion that generates code in various 
 
 Contributions are welcome! Please open an issue or submit a pull request on the GitHub repository.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgements
 
 - [Anthropic](https://www.anthropic.com/) for providing the Claude model.
