@@ -1,4 +1,4 @@
-CodeCraft - AI Programming Companion
+CodeCraft - AI Programming Companion#
 CodeCraft is an AI-powered programming companion that helps users generate code in various programming languages based on their specified tasks. It utilizes the Claude model from Anthropic to generate code and provides an interactive experience for users to refine the generated code based on their feedback.
 Features
 
