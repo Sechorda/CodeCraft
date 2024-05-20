@@ -1,76 +1,92 @@
-# CodeCraft - AI Programming Companion
+# AI Coding Assistant
 
-CodeCraft is an AI-powered programming companion that generates code in various languages based on user-specified tasks. It utilizes the Claude model from Anthropic to generate code and provides an interactive experience for users to refine the generated code based on their feedback.
+The AI Coding Assistant is a command-line tool that leverages the power of AI to assist with generating and modifying code. It provides an interactive interface for users to specify programming tasks or modifications, and utilizes the Anthropic API to generate code based on the user's input.
 
 ## Features
 
-- Generate code in JavaScript, Python, and Bash
-- Execute code in a secure, sandboxed environment using chroot
-- Iteratively refine code based on user feedback
-- Save the final generated code to a file
+- Generate new code snippets based on user-specified programming tasks
+- Modify existing codebases based on user-provided instructions
+- Support for multiple programming languages (JavaScript, Python, Shell)
+- Interactive feedback loop for iterative code refinement
+- Secure execution of generated code in a chroot environment
+- Integration with the Anthropic API for AI-powered code generation
 
-## Requirements
+## Prerequisites
 
-- Node.js (version 12+)
-- npm
-- dotenv
-- axios
-- readline
-- os
-- path
-- child_process
+Before running the AI Coding Assistant, make sure you have the following:
 
-## Setup
+- Node.js installed on your system
+- An Anthropic API key (set as the `ANTHROPIC_API_KEY` environment variable)
+
+## Installation
 
 1. Clone the repository:
+
    ```
-   git clone https://github.com/sechorda/codecraft.git
+   git clone https://github.com/sechorda/ai-coding-assistant.git
    ```
 
-2. Install dependencies:
+2. Navigate to the project directory:
+
    ```
-   cd codecraft
+   cd ai-coding-assistant
+   ```
+
+3. Install the required dependencies:
+
+   ```
    npm install
    ```
 
-3. Set up environment variables:
-   - Create a `.env` file in the project root.
-   - Add the following line to the `.env` file, replacing `YOUR_API_KEY` with your Anthropic API key:
-     ```
-     ANTHROPIC_API_KEY=YOUR_API_KEY
-     ```
+4. Set the `ANTHROPIC_API_KEY` environment variable with your Anthropic API key. You can create a `.env` file in the project root and add the following line:
+
+   ```
+   ANTHROPIC_API_KEY=your_api_key_here
+   ```
 
 ## Usage
 
-1. Run CodeCraft:
-   ```
-   node codecraft.js
-   ```
+To start the AI Coding Assistant, run the following command:
 
-2. Follow the prompts:
-   - Enter a programming task.
-   - Specify the programming language (js, py, or sh).
+```
+node coder.js
+```
 
-3. CodeCraft will generate code based on your task.
+The program will prompt you to choose between generating new code or modifying existing code.
 
-4. If the code executes successfully, you can provide feedback to refine it or type "done" if satisfied.
+### Generating New Code
 
-5. If the code fails to execute, CodeCraft will attempt to generate code again (up to 5 attempts).
+1. Enter `new` when prompted for the task type.
+2. Provide a programming task or description of the code you want to generate.
+3. Specify the programming language (js/py/sh).
+4. The assistant will generate code based on your input and display it.
+5. You can provide feedback on the generated code or type `done` if satisfied.
+6. The assistant will refine the code based on your feedback until you are satisfied.
+7. The final code will be saved to a file with the appropriate extension.
 
-6. The final code will be saved to `code.<language>` in the project directory.
+### Modifying Existing Code
+
+1. Enter `modify` when prompted for the task type.
+2. The assistant will use the current directory as the project directory.
+3. Provide a description of the modifications you want to make to the existing codebase.
+4. The assistant will analyze the codebase and make the necessary modifications based on your request.
+5. The modified code will be displayed for each affected file.
+6. The modified files will be updated with the new code.
+
+## Security
+
+The AI Coding Assistant prioritizes security by executing the generated code in a chroot environment. This isolated environment prevents the code from accessing or modifying files outside the designated directory. The chroot directory is created in a temporary location and removed after code execution.
 
 ## Limitations
 
-- Requires an internet connection and a valid Anthropic API key.
-- Generated code should be reviewed before use in production.
-- Supports a limited set of programming languages.
+- The AI Coding Assistant relies on the Anthropic API for code generation, so the quality and accuracy of the generated code may vary.
+- The tool supports a limited set of programming languages (JavaScript, Python, Shell) at the moment.
+- The tool may not handle complex codebases or advanced programming concepts effectively.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request on the GitHub repository.
+Contributions to the AI Coding Assistant are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 
-## Acknowledgements
+## License
 
-- [Anthropic](https://www.anthropic.com/) for providing the Claude model.
-- [Node.js](https://nodejs.org/) for the runtime environment.
-- All the open-source libraries and dependencies used.
+The AI Coding Assistant is open-source software licensed under the [MIT License](LICENSE).
