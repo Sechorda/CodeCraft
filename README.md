@@ -16,7 +16,7 @@ The AI Coding Assistant is a command-line tool that leverages the power of AI to
 Before running the AI Coding Assistant, make sure you have the following:
 
 - Node.js installed on your system
-- An Anthropic API key (set as the `ANTHROPIC_API_KEY` environment variable)
+- An Anthropic API key (This will cost money based on usage)
 
 ## Installation
 
